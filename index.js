@@ -1,5 +1,7 @@
 module.exports = {
 
+	extends: "eslint:recommended",
+
 	rules: {
 		"array-bracket-newline": ["error", { "multiline": true }],
 		"array-bracket-spacing": "error",
