@@ -1,0 +1,11 @@
+/node_modules/
+npm-shrinkwrap.json
+npm-debug.log
+
+# patch(1) files
+*.orig
+*.rej
+# wiggle(1) files
+*.porig
+# Visual Studio Code configuration
+/.vscode/
