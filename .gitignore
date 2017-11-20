@@ -1,5 +1,4 @@
 /node_modules/
-npm-shrinkwrap.json
 npm-debug.log
 
 # patch(1) files
@@ -9,3 +8,7 @@ npm-debug.log
 *.porig
 # Visual Studio Code configuration
 /.vscode/
+
+npm-shrinkwrap.json
+package-lock.json
+yarn.lock
