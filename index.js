@@ -71,6 +71,7 @@ module.exports = {
 		"no-new-wrappers": "error",
 		"no-param-reassign": "error",
 		"no-return-assign": "error",
+		"no-return-await": "error",
 		"no-self-compare": "error",
 		"no-sequences": "error",
 		"no-shadow": "error",
