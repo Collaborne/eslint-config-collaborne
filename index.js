@@ -16,7 +16,7 @@ module.exports = {
 	],
 
 	rules: {
-		"array-bracket-newline": ["error", { "multiline": true }],
+		"array-bracket-newline": ["error", "consistent"],
 		"array-bracket-spacing": "error",
 		"arrow-parens": ["error", "as-needed"],
 		"arrow-spacing": "error",
@@ -99,7 +99,7 @@ module.exports = {
 		"nonblock-statement-body-position": "error",
 		"object-curly-newline": ["error", {"consistent": true}],
 		"object-curly-spacing": "error",
-		"object-property-newline": "error",
+		"object-property-newline": ["error", {"allowAllPropertiesOnSameLine": true}],
 		"operator-assignment": "error",
 		"operator-linebreak": ["error", "after"],
 		"padded-blocks": ["error", "never"],
