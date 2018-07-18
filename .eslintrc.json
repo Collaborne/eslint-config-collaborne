@@ -1,0 +1,16 @@
+{
+	"root": true,
+	"env": {
+		"node": true
+	},
+	"parserOptions": {
+		"sourceType": "module"
+	},
+
+	"extends": "./index.js",
+
+	"rules": {
+		"quote-props": "warn",
+		"sort-keys": "warn"
+	}
+}

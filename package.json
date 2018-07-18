@@ -4,7 +4,7 @@
   "description": "ES lint configuration for Collaborne projects",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"No test specified\""
+    "test": "eslint ."
   },
   "repository": {
     "type": "git",
@@ -22,5 +22,8 @@
   },
   "peerDependencies": {
     "eslint": ">= 4"
+  },
+  "devDependencies": {
+    "eslint": "^5.1.0"
   }
 }
