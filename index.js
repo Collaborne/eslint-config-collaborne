@@ -11,6 +11,10 @@ module.exports = {
 		}
 	},
 
+	plugins: [
+		"chai-expect"
+	],
+
 	rules: {
 		"array-bracket-newline": ["error", { "multiline": true }],
 		"array-bracket-spacing": "error",
@@ -125,6 +129,10 @@ module.exports = {
 		"valid-jsdoc": "error",
 		"wrap-iife": "error",
 		"yield-star-spacing": "error",
+
+		"chai-expect/missing-assertion": "error",
+		"chai-expect/no-inner-compare": "error",
+		"chai-expect/terminating-properties": "error",
 	},
 
 };
