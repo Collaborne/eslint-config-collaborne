@@ -48,6 +48,7 @@ module.exports = {
 		'max-statements': 'warn',
 		'max-statements-per-line': 'warn',
 		'new-parens': 'error',
+		'no-buffer-constructor': 'warn',
 		'no-catch-shadow': 'error',
 		'no-confusing-arrow': 'error',
 		'no-console': 'off',
