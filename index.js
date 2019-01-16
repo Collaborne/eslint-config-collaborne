@@ -2,13 +2,11 @@ module.exports = {
 
 	extends: 'eslint:recommended',
 
-	parser: 'babel-eslint',
-
 	parserOptions: {
-		ecmaVersion: 2017,
+		ecmaVersion: 2018,
 		ecmaFeatures: {
-			classes: true
-		}
+			classes: true,
+		},
 	},
 
 	plugins: ['chai-expect'],
