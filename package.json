@@ -17,12 +17,14 @@
   },
   "homepage": "https://github.com/Collaborne/eslint-config-collaborne#readme",
   "dependencies": {
-    "eslint-plugin-chai-expect": "^1.1.1"
+    "@typescript-eslint/eslint-plugin": "^3.8.0",
+    "@typescript-eslint/parser": "^3.8.0"
   },
   "peerDependencies": {
-    "eslint": ">= 5"
+    "eslint": ">= 7"
   },
   "devDependencies": {
-    "eslint": "^5.1.0"
+    "eslint": "^7.6.0",
+    "typescript": "^3.9.7"
   }
 }
