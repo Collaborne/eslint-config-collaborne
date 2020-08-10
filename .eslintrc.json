@@ -12,6 +12,9 @@
 
 	"rules": {
 		"quote-props": "warn",
-		"sort-keys": "warn"
+		"sort-keys": "warn",
+		"@typescript-eslint/no-unused-vars": [ "error", {
+			"argsIgnorePattern": "^_"
+		}]
 	}
 }
