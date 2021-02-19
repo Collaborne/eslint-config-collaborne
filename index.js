@@ -33,13 +33,14 @@ module.exports = {
 			jsx: false,
 		},
 	},
-	plugins: ['import', '@typescript-eslint', 'disable'],
+	plugins: ['import', '@typescript-eslint', 'disable', 'promise'],
 	processor: 'disable/disable',
 	rules: {
 		'space-before-function-paren': 0,
 		'import/export': 0,
 		'no-void': ['error', { allowAsStatement: true }],
 		'require-await': 'off',
+		'promise/always-return': 'warn',
 	},
 
 	overrides: [
