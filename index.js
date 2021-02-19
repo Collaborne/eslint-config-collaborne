@@ -54,7 +54,11 @@ module.exports = {
 				'@typescript-eslint/explicit-function-return-type': 'off',
 				'@typescript-eslint/no-empty-interface': 'off',
 				'no-unused-vars': 'off',
-				'@typescript-eslint/no-unused-vars': ['error'],
+				"@typescript-eslint/no-unused-vars": [ 'error', {
+					argsIgnorePattern: '^_',
+					varsIgnorePattern: '^_',
+					ignoreRestSiblings: true,
+				}],
 				'no-use-before-define': 'off',
 				'@typescript-eslint/no-use-before-define': ['error'],
 				'no-useless-constructor': 'off',
@@ -74,7 +78,11 @@ module.exports = {
 			},
 
 			rules: {
-				'no-unused-vars': 'error',
+				'no-unused-vars': [ 'error', {
+					argsIgnorePattern: '^_',
+					varsIgnorePattern: '^_',
+					ignoreRestSiblings: true,
+				}],
 				'no-use-before-define': 'error',
 				'no-useless-constructor': 'error',
 			},
