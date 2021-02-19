@@ -4,6 +4,7 @@
   "description": "ES lint configuration for Collaborne projects",
   "main": "index.js",
   "scripts": {
+    "lint": "eslint index.js test/**/*.ts",
     "test": "eslint test"
   },
   "repository": {

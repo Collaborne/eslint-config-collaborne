@@ -6,7 +6,9 @@ const tsConfigPath = resolvePath('tsconfig.json');
 const hasTsConfig = existsSync(tsConfigPath);
 
 const tsConfigRules = {
-	'@typescript-eslint/no-floating-promises': hasTsConfig ? ['error', { ignoreVoid: true }] : 'off',
+	'@typescript-eslint/no-floating-promises': hasTsConfig
+		? ['error', { ignoreVoid: true }]
+		: 'off',
 	'@typescript-eslint/await-thenable': hasTsConfig ? ['error'] : 'off',
 };
 
@@ -31,11 +33,7 @@ module.exports = {
 			jsx: false,
 		},
 	},
-	plugins: [
-		'import',
-		'@typescript-eslint',
-		'disable',
-	],
+	plugins: ['import', '@typescript-eslint', 'disable'],
 	processor: 'disable/disable',
 	rules: {
 		'space-before-function-paren': 0,
@@ -72,9 +70,7 @@ module.exports = {
 			files: '**/*.js',
 
 			settings: {
-				'disable/plugins': [
-					'@typescript-eslint',
-				],
+				'disable/plugins': ['@typescript-eslint'],
 			},
 
 			rules: {
