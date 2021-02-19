@@ -5,6 +5,11 @@ const { resolve: resolvePath } = require('path');
 const tsConfigPath = resolvePath('tsconfig.json');
 const hasTsConfig = existsSync(tsConfigPath);
 
+const tsConfigRules = {
+	'@typescript-eslint/no-floating-promises': hasTsConfig ? ['error', { ignoreVoid: true }] : 'off',
+	'@typescript-eslint/await-thenable': hasTsConfig ? ['error'] : 'off',
+};
+
 module.exports = {
 	root: true,
 	parser: '@typescript-eslint/parser',
@@ -14,29 +19,29 @@ module.exports = {
 		'plugin:@typescript-eslint/recommended',
 		'plugin:prettier/recommended',
 		'prettier/standard',
-		'prettier/@typescript-eslint'
+		'prettier/@typescript-eslint',
 	],
 	env: {
-		node: true
+		node: true,
 	},
 	parserOptions: {
 		ecmaVersion: 2020,
 		ecmaFeatures: {
 			legacyDecorators: true,
-			jsx: false
-		}
+			jsx: false,
+		},
 	},
 	plugins: [
 		'import',
 		'@typescript-eslint',
-		'disable'
+		'disable',
 	],
 	processor: 'disable/disable',
 	rules: {
 		'space-before-function-paren': 0,
 		'import/export': 0,
 		'no-void': ['error', { allowAsStatement: true }],
-		'require-await': 'off'
+		'require-await': 'off',
 	},
 
 	overrides: [
@@ -57,27 +62,26 @@ module.exports = {
 				'no-useless-constructor': 'off',
 				'@typescript-eslint/no-useless-constructor': ['error'],
 
-				'@typescript-eslint/no-floating-promises': hasTsConfig ? ['error', { ignoreVoid: true }] : 'off',
-				'@typescript-eslint/await-thenable': hasTsConfig ? ['error'] : 'off',
-
 				'@typescript-eslint/restrict-template-expressions': 'off',
-				'@typescript-eslint/require-await': 'off'
-			}
+				'@typescript-eslint/require-await': 'off',
+
+				...tsConfigRules,
+			},
 		},
 		{
 			files: '**/*.js',
 
 			settings: {
 				'disable/plugins': [
-					'@typescript-eslint'
-				]
+					'@typescript-eslint',
+				],
 			},
 
 			rules: {
 				'no-unused-vars': 'error',
 				'no-use-before-define': 'error',
-				'no-useless-constructor': 'error'
-			}
-		}
-	]
+				'no-useless-constructor': 'error',
+			},
+		},
+	],
 };
