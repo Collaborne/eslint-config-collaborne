@@ -1,20 +1,3 @@
 {
-	"root": true,
-	"env": {
-		"node": true
-	},
-	"parserOptions": {
-		"project": "tsconfig.json",
-		"sourceType": "module"
-	},
-
-	"extends": "./index.js",
-
-	"rules": {
-		"quote-props": "warn",
-		"sort-keys": "warn",
-		"@typescript-eslint/no-unused-vars": [ "error", {
-			"argsIgnorePattern": "^_"
-		}]
-	}
+	"extends": "./index.js"
 }
