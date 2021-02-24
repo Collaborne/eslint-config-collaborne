@@ -45,7 +45,7 @@ module.exports = {
 
 	overrides: [
 		{
-			files: '**/*.ts',
+			files: ['**/*.ts', '**/*.tsx'],
 
 			parserOptions: {
 				project: hasTsConfig ? 'tsconfig.json' : undefined,
@@ -75,7 +75,7 @@ module.exports = {
 			},
 		},
 		{
-			files: '**/*.js',
+			files: ['**/*.js', '**/*.jsx'],
 
 			settings: {
 				'disable/plugins': ['@typescript-eslint'],
@@ -92,6 +92,19 @@ module.exports = {
 				],
 				'no-use-before-define': 'error',
 				'no-useless-constructor': 'error',
+			},
+		},
+		{
+			files: ['**/*.jsx', '**/*.tsx'],
+
+			parserOptions: {
+				ecmaFeatures: {
+					jsx: true,
+				},
+			},
+
+			env: {
+				node: false,
 			},
 		},
 	],
