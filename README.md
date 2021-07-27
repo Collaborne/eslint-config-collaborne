@@ -44,7 +44,7 @@ ES lint configuration for Collaborne projects
 
     ```json
     {
-      "extends": "collaborne",
+      "extends": "collaborne"
     }
     ```
 
