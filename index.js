@@ -20,8 +20,6 @@ module.exports = {
 		'plugin:promise/recommended',
 		'plugin:@typescript-eslint/recommended',
 		'plugin:prettier/recommended',
-		'prettier/standard',
-		'prettier/@typescript-eslint',
 	],
 	env: {
 		node: true,
