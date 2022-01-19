@@ -69,6 +69,50 @@ module.exports = {
 				'@typescript-eslint/restrict-template-expressions': 'off',
 				'@typescript-eslint/require-await': 'off',
 
+				camelcase: 'off',
+				'@typescript-eslint/naming-convention': [
+					'warn',
+					{
+						selector: 'default',
+						format: ['camelCase'],
+					},
+
+					{
+						selector: 'variable',
+						format: ['camelCase', 'UPPER_CASE'],
+						leadingUnderscore: 'allow',
+					},
+					{
+						selector: 'parameter',
+						format: ['camelCase'],
+						leadingUnderscore: 'allow',
+					},
+
+					{
+						selector: ['variable', 'parameter'],
+						modifiers: ['unused'],
+						leadingUnderscore: 'require',
+						format: null,
+					},
+
+					{
+						selector: 'memberLike',
+						modifiers: ['private'],
+						format: ['camelCase'],
+					},
+
+					{
+						selector: 'typeLike',
+						format: ['PascalCase'],
+					},
+
+					{
+						selector: 'variable',
+						modifiers: ['destructured'],
+						format: null,
+					},
+				],
+
 				...tsConfigRules,
 			},
 		},
@@ -90,6 +134,7 @@ module.exports = {
 				],
 				'no-use-before-define': 'error',
 				'no-useless-constructor': 'error',
+				camelcase: ['warn', { ignoreDestructuring: true }],
 			},
 		},
 		{

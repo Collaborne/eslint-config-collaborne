@@ -1,3 +1,18 @@
+export const A_CONSTANT_VALUE = 500;
+
+export interface Interface {
+	// eslint-disable-next-line @typescript-eslint/naming-convention
+	camel_case_should_be_used: boolean;
+}
+
+export class Class {
+	private foo = 3;
+
+	getFoo() {
+		return this.foo;
+	}
+}
+
 export function hello(): string {
 	return 'Hello world!';
 }
