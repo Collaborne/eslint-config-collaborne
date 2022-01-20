@@ -39,6 +39,7 @@ module.exports = {
 		'no-void': ['error', { allowAsStatement: true }],
 		'require-await': 'off',
 		'promise/always-return': 'warn',
+		'promise/catch-or-return': ['warn', { allowFinally: true }],
 	},
 
 	overrides: [
