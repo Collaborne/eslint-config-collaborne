@@ -40,6 +40,7 @@ module.exports = {
 		'require-await': 'off',
 		'promise/always-return': 'warn',
 		'promise/catch-or-return': ['warn', { allowFinally: true }],
+		'max-lines': ['error', { max: 300 }],
 	},
 
 	overrides: [
