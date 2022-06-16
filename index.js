@@ -72,6 +72,17 @@ module.exports = {
 				'@typescript-eslint/require-await': 'off',
 
 				camelcase: 'off',
+				curly: ['error'],
+				'no-cond-assign': ['error'],
+				'no-constant-binary-expression': ['error'],
+				'no-fallthrough': ['error'],
+				'no-invalid-regexp': ['error'],
+				'no-nested-ternary': ['error'],
+				'no-self-assign': ['error'],
+				'no-template-curly-in-string': ['error'],
+				'require-atomic-updates': ['error'],
+				'use-isnan': ['error'],
+				'valid-typeof': ['error'],
 				'@typescript-eslint/naming-convention': [
 					'warn',
 					{
@@ -79,6 +90,11 @@ module.exports = {
 						format: ['camelCase'],
 					},
 
+					{
+						selector: 'function',
+						// JSX functions are in PascalCase
+						format: ['camelCase', 'PascalCase'],
+					},
 					{
 						selector: 'variable',
 						format: ['camelCase', 'UPPER_CASE'],
@@ -113,6 +129,10 @@ module.exports = {
 						modifiers: ['destructured'],
 						format: null,
 					},
+					{
+						selector: 'objectLiteralProperty',
+						format: null,
+					},
 				],
 
 				...tsConfigRules,
@@ -137,6 +157,13 @@ module.exports = {
 				'no-use-before-define': 'error',
 				'no-useless-constructor': 'error',
 				camelcase: ['warn', { ignoreDestructuring: true }],
+			},
+		},
+		{
+			files: ['**/*.d.ts'],
+
+			rules: {
+				camelcase: 'off',
 			},
 		},
 		{
