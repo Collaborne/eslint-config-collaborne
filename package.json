@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-collaborne",
-  "version": "4.0.0",
+  "version": "4.1.0",
   "description": "ES lint configuration for Collaborne projects",
   "main": "index.js",
   "scripts": {
