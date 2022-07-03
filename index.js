@@ -81,6 +81,7 @@ module.exports = {
 				'no-self-assign': ['error'],
 				'no-template-curly-in-string': ['error'],
 				'require-atomic-updates': ['error'],
+				'sort-imports': ['error', { allowSeparatedGroups: true }],
 				'use-isnan': ['error'],
 				'valid-typeof': ['error'],
 				'@typescript-eslint/naming-convention': [
