@@ -124,10 +124,8 @@ module.exports = {
 					{
 						selector: 'memberLike',
 						modifiers: ['private'],
-						format: ['camelCase'],
-						// Support underscores in property names
-						leadingUnderscore: 'allow',
-						trailingUnderscore: 'allow',
+						// API fields use snake_case, e.g. property_values
+						format: ['camelCase', 'snake_case'],
 					},
 
 					{
