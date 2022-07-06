@@ -124,7 +124,8 @@ module.exports = {
 					{
 						selector: 'memberLike',
 						modifiers: ['private'],
-						format: ['camelCase'],
+						// API fields use snake_case, e.g. property_values
+						format: ['camelCase', 'snake_case'],
 					},
 
 					{
