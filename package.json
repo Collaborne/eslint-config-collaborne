@@ -19,8 +19,8 @@
 	},
 	"homepage": "https://github.com/Collaborne/eslint-config-collaborne#readme",
 	"dependencies": {
-		"eslint-config-prettier": "^8.5.0",
-		"eslint-config-standard": "^17.0.0"
+		"eslint-config-prettier": "^9.1.0",
+		"eslint-config-standard": "^17.1.0"
 	},
 	"peerDependencies": {
 		"@typescript-eslint/eslint-plugin": "^5.29.0 || ^6.0.0",
