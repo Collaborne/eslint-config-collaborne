@@ -41,6 +41,7 @@ module.exports = {
 		'promise/always-return': 'warn',
 		'promise/catch-or-return': ['warn', { allowFinally: true }],
 		'max-lines': ['error', { max: 300 }],
+		'prettier/prettier': ['error', { useTabs: true }],
 	},
 
 	overrides: [
