@@ -19,7 +19,10 @@ export function hello(): string {
 
 export function unusedThings(_unusedArgument = 'ok'): unknown {
 	const _unusedVariable = 'ok';
-	const { _unusedRestSibling, ...rest } = { foo: '100' };
+	const { _unusedRestSibling, ...rest } = {
+		_unusedRestSibling: 'ignored',
+		foo: '100',
+	};
 	return rest;
 }
 
@@ -29,6 +32,7 @@ export function alwaysReturnExample(): void {
 	promise
 		.then(value => {
 			console.log(`We got a value: ${value}`);
+			return undefined;
 		})
 		.catch(err => {
 			console.error(err);

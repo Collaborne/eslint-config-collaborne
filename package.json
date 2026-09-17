@@ -1,12 +1,13 @@
 {
 	"name": "eslint-config-collaborne",
-	"version": "5.6.0",
+	"version": "5.7.0",
 	"description": "ES lint configuration for Collaborne projects",
 	"main": "index.js",
 	"scripts": {
-		"lint": "eslint index.js test/**/*.ts",
-		"test": "eslint test",
-		"build": "echo 'There is no build for this project' >&2"
+		"lint": "node node_modules/eslint/bin/eslint.js index.js flat.js rules.js standard.js test/test.ts",
+		"test": "npm run test:compat && node node_modules/eslint/bin/eslint.js test/test.ts",
+		"build": "echo 'There is no build for this project' >&2",
+		"test:compat": "node --test test/__tests__/*.test.cjs && ESLINT_FLAT_PACKAGE=eslint-flat-v9 node --test test/__tests__/*.test.cjs"
 	},
 	"repository": {
 		"type": "git",
@@ -19,8 +20,7 @@
 	},
 	"homepage": "https://github.com/Collaborne/eslint-config-collaborne#readme",
 	"dependencies": {
-		"eslint-config-prettier": "^9.1.0",
-		"eslint-config-standard": "^17.1.0"
+		"eslint-config-prettier": "^9.1.0"
 	},
 	"peerDependencies": {
 		"@typescript-eslint/eslint-plugin": "^5.29.0 || ^6.0.0 || ^7.0.0 || ^8.0.0",
@@ -28,21 +28,51 @@
 		"eslint": ">= 8",
 		"eslint-plugin-disable": "^2.0.3",
 		"eslint-plugin-import": "^2.26.0",
-		"eslint-plugin-node": "^11.1.0",
 		"eslint-plugin-prettier": "^4.0.0 || ^5.0.0",
 		"eslint-plugin-promise": "^6.0.0 || ^7.0.0",
-		"prettier": "^2.7.1 || ^3.0.0"
+		"prettier": "^2.7.1 || ^3.0.0",
+		"eslint-plugin-import-x": "^4.17.0",
+		"eslint-plugin-n": "^16.6.2 || ^17.0.0"
 	},
 	"devDependencies": {
-		"@typescript-eslint/eslint-plugin": "^8.60.1",
-		"@typescript-eslint/parser": "^8.60.1",
+		"@typescript-eslint/eslint-plugin": "^8.70.0",
+		"@typescript-eslint/parser": "^8.70.0",
 		"eslint": "^8.57.1",
 		"eslint-plugin-disable": "^2.0.3",
 		"eslint-plugin-import": "^2.26.0",
-		"eslint-plugin-node": "^11.1.0",
-		"eslint-plugin-prettier": "^4.0.0",
-		"eslint-plugin-promise": "^6.0.0",
-		"prettier": "^2.7.1",
-		"typescript": "^6.0.3"
-	}
+		"eslint-plugin-prettier": "^5.5.6",
+		"eslint-plugin-promise": "^7.2.1",
+		"prettier": "^3.9.7",
+		"typescript": "^6.0.3",
+		"eslint-flat": "npm:eslint@^10.10.0",
+		"eslint-plugin-import-x": "^4.17.0",
+		"eslint-plugin-n": "^17.23.0",
+		"eslint-flat-v9": "npm:eslint@^9.39.0"
+	},
+	"exports": {
+		".": "./index.js",
+		"./flat": "./flat.js",
+		"./flat.js": "./flat.js",
+		"./index.js": "./index.js",
+		"./package.json": "./package.json"
+	},
+	"peerDependenciesMeta": {
+		"eslint-plugin-disable": {
+			"optional": true
+		},
+		"eslint-plugin-import": {
+			"optional": true
+		},
+		"eslint-plugin-import-x": {
+			"optional": true
+		}
+	},
+	"files": [
+		"index.js",
+		"flat.js",
+		"rules.js",
+		"standard.js",
+		"STANDARD-LICENSE",
+		"examples"
+	]
 }
