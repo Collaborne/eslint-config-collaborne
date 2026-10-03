@@ -4,7 +4,7 @@ const { resolve } = require('node:path');
 const { baseRules, typescriptRules, javascriptRules } = require('./rules');
 const standard = require('./standard');
 
-/** Create a native ESLint 9/10 config; resolve TS projects from the consumer. */
+/** Create a native ESLint 10 config; resolve TS projects from the consumer. */
 module.exports = function createCollaborneConfig({
 	tsconfigRootDir = process.cwd(),
 	project = existsSync(resolve(tsconfigRootDir, 'tsconfig.json'))

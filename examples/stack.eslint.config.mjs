@@ -1,4 +1,4 @@
-import createCollaborneConfig from 'eslint-config-collaborne/flat';
+import createCollaborneConfig from 'eslint-config-collaborne';
 
 export default [
 	...createCollaborneConfig({

@@ -1,7 +1,7 @@
 /* eslint-disable max-lines -- This is the shared Standard rule baseline. */
 // Standard 17 baseline shared by both config formats.
 // Copyright Feross Aboukhadijeh; see STANDARD-LICENSE (MIT).
-// Native rules avoid the upstream package's ESLint 8-only peer constraints.
+// Keep the Standard-style baseline local instead of depending on a legacy preset.
 module.exports = {
 	parserOptions: {
 		ecmaVersion: 2022,
