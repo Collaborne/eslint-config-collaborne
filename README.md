@@ -18,7 +18,7 @@ Use Node.js 22.13 or newer. Install the package and its peers:
 ```sh
 npm install --save-dev eslint-config-collaborne eslint@^10 \
   @typescript-eslint/eslint-plugin@^8.70 @typescript-eslint/parser@^8.70 \
-  eslint-plugin-import-x@^4.17 eslint-plugin-n@^17 \
+  eslint-plugin-import-x@^4.17 eslint-plugin-n@^18.2 \
   eslint-plugin-prettier@^5 eslint-plugin-promise@^7 prettier@^3
 ```
 
